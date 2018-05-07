@@ -5,9 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestJ {
 
-    @org.testng.annotations.Test
-    public void testAdd() {
-        String str = "Junit is working fine";
-        assertEquals("Junit is working fine", str);
+    @Test
+
+    public void test() {
+        String str = "It is working!";
+        assertEquals("It is working!", str);
     }
 }

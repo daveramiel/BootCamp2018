@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cabdb27-27ef-4013-8f01-aa2c53c7a067" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestJ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/TestJ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestJ.class" afterDir="false" />
     </list>
@@ -31,8 +30,8 @@
       <file leaf-file-name="TestJ.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TestJ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="136">
+              <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,8 +70,8 @@
         <option value="$PROJECT_DIR$/src/main/java/TestinJunit.java" />
         <option value="$PROJECT_DIR$/src/main/java/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/RunTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestJ.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TestJ.java" />
       </list>
     </option>
   </component>
@@ -218,7 +217,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -303,8 +302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TestJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

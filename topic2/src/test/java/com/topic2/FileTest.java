@@ -16,4 +16,8 @@ public class FileTest {
         this.ListT = new ArrayDeque();
     }
 
+    public void addToArrayFirst(String somethingAdd){
+        this.ListT.addFirst(somethingAdd);
+    }
+
 }

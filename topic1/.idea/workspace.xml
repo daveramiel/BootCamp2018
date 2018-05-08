@@ -17,17 +17,17 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="459">
               <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/topic1/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -39,13 +39,49 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="JUnitTesting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/topic1/JUnitTesting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JUnitTestingClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/topic1/JUnitTestingClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding>
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#143#144#0" expanded="true" />
+                <element signature="e#495#496#0" expanded="true" />
+                <element signature="e#531#532#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/topic1/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/topic1/JUnitTestingClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/topic1/JUnitTesting.java" />
       </list>
     </option>
   </component>
@@ -60,6 +96,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -124,8 +161,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../topic2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -139,11 +178,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.JUnitTesting.testHeyName">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="AppTest.TestJ" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JUnitTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="topic1" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +193,100 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.topic1" />
-      <option name="MAIN_CLASS_NAME" value="com.topic1.AppTest" />
-      <option name="METHOD_NAME" value="TestJ" />
+      <option name="MAIN_CLASS_NAME" value="com.topic1.JUnitTesting" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JUnitTesting.testHelloDude" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topic1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.topic1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.topic1" />
+      <option name="MAIN_CLASS_NAME" value="com.topic1.JUnitTesting" />
+      <option name="METHOD_NAME" value="testHelloDude" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JUnitTesting.testHelloEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topic1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.topic1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.topic1" />
+      <option name="MAIN_CLASS_NAME" value="com.topic1.JUnitTesting" />
+      <option name="METHOD_NAME" value="testHelloEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JUnitTesting.testHeyEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topic1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.topic1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.topic1" />
+      <option name="MAIN_CLASS_NAME" value="com.topic1.JUnitTesting" />
+      <option name="METHOD_NAME" value="testHeyEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="JUnitTesting.testHeyName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="topic1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.topic1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.topic1" />
+      <option name="MAIN_CLASS_NAME" value="com.topic1.JUnitTesting" />
+      <option name="METHOD_NAME" value="testHeyName" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -204,9 +335,20 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.JUnitTesting.testHelloEmpty" />
+      <item itemvalue="JUnit.JUnitTesting" />
+      <item itemvalue="JUnit.JUnitTesting.testHelloDude" />
+      <item itemvalue="JUnit.JUnitTesting.testHeyEmpty" />
+      <item itemvalue="JUnit.JUnitTesting.testHeyName" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.TestJ" />
+        <item itemvalue="JUnit.JUnitTesting.testHeyName" />
+        <item itemvalue="JUnit.JUnitTesting.testHeyEmpty" />
+        <item itemvalue="JUnit.JUnitTesting.testHelloDude" />
+        <item itemvalue="JUnit.JUnitTesting.testHelloEmpty" />
+        <item itemvalue="JUnit.JUnitTesting" />
       </list>
     </recent_temporary>
   </component>
@@ -224,41 +366,66 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppTest_TestJ - 2018.05.07 at 21h 30m 07s.xml">
-      <configuration name="AppTest.TestJ" configurationId="JUnit" />
+    <history-entry file="JUnitTesting_testHeyEmpty - 2018.05.08 at 17h 40m 30s.xml">
+      <configuration name="JUnitTesting.testHeyEmpty" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppTest_TestJ - 2018.05.07 at 21h 30m 27s.xml">
-      <configuration name="AppTest.TestJ" configurationId="JUnit" />
+    <history-entry file="JUnitTesting_testHeyName - 2018.05.08 at 17h 40m 37s.xml">
+      <configuration name="JUnitTesting.testHeyName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyName - 2018.05.08 at 17h 40m 46s.xml">
+      <configuration name="JUnitTesting.testHeyName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyName - 2018.05.08 at 17h 45m 38s.xml">
+      <configuration name="JUnitTesting.testHeyName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyName - 2018.05.08 at 17h 46m 15s.xml">
+      <configuration name="JUnitTesting.testHeyName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyName - 2018.05.08 at 17h 46m 40s.xml">
+      <configuration name="JUnitTesting.testHeyName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyEmpty - 2018.05.08 at 17h 49m 14s.xml">
+      <configuration name="JUnitTesting.testHeyEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyEmpty - 2018.05.08 at 17h 49m 32s.xml">
+      <configuration name="JUnitTesting.testHeyEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyEmpty - 2018.05.08 at 17h 54m 22s.xml">
+      <configuration name="JUnitTesting.testHeyEmpty" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="JUnitTesting_testHeyName - 2018.05.08 at 17h 54m 28s.xml">
+      <configuration name="JUnitTesting.testHeyName" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.33161512" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.32943013" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20686963" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.33156216" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20677084" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" visible="true" weight="0.32943013" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
@@ -266,10 +433,32 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="459">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/topic1/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
@@ -278,6 +467,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/topic1/JUnitTestingClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/topic1/JUnitTesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

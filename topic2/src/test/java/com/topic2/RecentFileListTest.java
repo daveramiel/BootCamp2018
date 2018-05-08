@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class RecentFileListTest {
@@ -27,22 +28,27 @@ public class RecentFileListTest {
 
     @Before
     public void setUp(){
-        FileTest recentList = new FileTest();
+        this.recentList = new FileTest();
     }
 
+    ///Simple if it's empty will be GREEN!
     @Test
     public void FirstTimeRun(){
         assertTrue(recentList.getListT().isEmpty());
     }
 
+
+    ///First did it in a way, after reading and learning new things... optimized
+    ///Left the old code so you can view progress
     @Test
-    public void FileOpenedAddRecentFile(){
+    public void FileOpenedAddRecentFile() throws IOException {
         ///At first
 
         ///File testing = new File("C:\\Users\\David\\Desktop\\BootCamp\\topic2\\Files\\Test.txt");
 
         ///After reading
-        File testing = tFolder.newFile("testing.txt");
+
+        File testing = tFolder.newFile("test.txt");
 
         /*try {
             if (testing.createNewFile()){
@@ -55,19 +61,56 @@ public class RecentFileListTest {
         }
         */
 
-        String nameFile = testing.getName();
-        recentList.addToArrayFirst(nameFile);
+        recentList.addToArrayFirst(testing.getName());
+
+        /*  NOT ANYMORE
         recentList.addToArrayFirst("reloaded.txt");
         recentList.addToArrayFirst("Matrix.txt");
         Iterator it= recentList.getListT().iterator();
         while (it.hasNext()){
             System.out.print(it.next() + " ");
         }
+        */
+
+        assertEquals(testing.getName(),recentList.getListT().getFirst());
     }
 
-    public void AlreadyExistsTotheTopYouGo(){
 
+    ///Tried to create a new subFolder with archives on it, can't create Files with the same name
+    ///need to ask how to do it
+    @Test
+    public void AlreadyExistsToTheTopYouGo() throws IOException {
+        File test1 = tFolder.newFile("charles.txt");
+        recentList.doesItExistAndAdd(test1.getName());
+        File test2 = tFolder.newFile("logan.txt");
+        recentList.doesItExistAndAdd(test2.getName());
+        File test4 = tFolder.newFile("jean.txt");
+        recentList.doesItExistAndAdd(test4.getName());
 
+        File newF = tFolder.newFolder("subFolder");
+
+        File test3 = new File(tFolder.getRoot()+"\\charles.txt");
+        recentList.doesItExistAndAdd(test3.getName());
+        assertEquals(test1.getName(),recentList.getListT().getFirst());
+    }
+
+    @Test
+    public void listFullRemoveOlder(){
+
+        ///Setting the array with a size of 7
+        int size = 7;
+
+        for (int i=0; i < size;i++){
+            recentList.addToArrayFirst(Math.random()+".txt");
+        }
+        ///String lastFile= (String) recentList.getListT().getLast();
+
+        if (recentList.getListT().size() == 7 ){
+            ///Removes tails from ArrayDeque in this case, the oldest file
+            recentList.getListT().removeLast();
+        }
+        ///since we took out one of the files, should be 6... size-1
+        assertEquals(size-1,recentList.getListT().size());
     }
 
 }

@@ -6,27 +6,25 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.mockito.Mockito.*;
-
 import java.util.ArrayDeque;
-import java.util.Iterator;
+
+import static org.mockito.Mockito.*;
 
 public class BlogTest {
 
-    private ArrayDeque<PostTest> postsList;
+    private Blog postsList;
 
     @Before
-    public void setUp() {
-        this.postsList = new ArrayDeque<>();
-    }
+    public void setUp(){this.postsList = new Blog();}
+
 
     @Test
     public void addNewPost() {
-        PostTest post = mock(PostTest.class);
+        Post post = mock(Post.class);
         when(post.getTitle()).thenReturn("First Post Dude");
         when(post.getPost()).thenReturn("This is my first post");
-        this.postsList.addFirst(post);
-        assertEquals(this.postsList.getFirst().getTitle(), post.getTitle());
+        this.postsList.addNewPost(post);
+        assertEquals(this.postsList.getNewestPost().getTitle(), post.getTitle());
     }
 
     @Test
@@ -38,21 +36,21 @@ public class BlogTest {
     @Test
     public void deletePostByName() {
         Boolean answer = false;
-        PostTest postD = mock(PostTest.class);
+        Post postD = mock(Post.class);
         when(postD.getTitle()).thenReturn("first for fun");
-        PostTest postF = mock(PostTest.class);
+        Post postF = mock(Post.class);
         when(postF.getTitle()).thenReturn("second for fun");
-        PostTest postX = mock(PostTest.class);
+        Post postX = mock(Post.class);
         when(postX.getTitle()).thenReturn("delete this one");
 
-        this.postsList.add(postD);
-        this.postsList.add(postF);
-        this.postsList.add(postX);
+        this.postsList.addNewPost(postD);
+        this.postsList.addNewPost(postF);
+        this.postsList.addNewPost(postX);
 
-        for (PostTest posty : this.postsList) {
+        for (Post posty : this.postsList.getBloggy()) {
 
             if (postX.getTitle().equalsIgnoreCase(posty.getTitle())) {
-                this.postsList.remove(posty);
+                this.postsList.getBloggy().remove(posty);
                 answer = true;
             }
 
@@ -62,15 +60,12 @@ public class BlogTest {
 
     @Test
     public void bringMeTheTenMostRecent(){
-        PostTest postD = mock(PostTest.class);
+        Post postD = mock(Post.class);
         for (int i=0;i < 15; i++){
             when(postD.getTitle()).thenReturn("Mocking Post" + i);
-            this.postsList.add(postD);
+            this.postsList.getBloggy().add(postD);
         }
-        int j= 0;
-        Iterator ite = this.postsList.iterator();
-        while (j<10 && ite.hasNext()){
-
-        }
+        ArrayDeque<Post> lastTen = this.postsList.getNewestTenPosts();
+        assertEquals(lastTen.size(),10);
     }
 }

@@ -3,7 +3,7 @@ package com.topic2Blog;
 import lombok.Getter;
 import lombok.Setter;
 
-public class PostTest {
+public class Post {
 
     @Getter
     @Setter
@@ -13,10 +13,9 @@ public class PostTest {
     @Setter
     private String title;
 
-    public PostTest(){
+    public Post(){
 
     }
-
 
 
 }

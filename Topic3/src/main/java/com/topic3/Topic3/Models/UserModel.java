@@ -1,17 +1,13 @@
-package com.topic3.Topic3.model;
+package com.topic3.Topic3.Models;
 
 import lombok.Getter;
 import lombok.Setter;
 
-public class User {
+@Getter
+@Setter
+public class UserModel {
 
-    @Getter
-    @Setter
-    private String mail;
-    @Getter
-    @Setter
+    private String mailLogin;
     private String password;
-    @Getter
-    @Setter
-    private Long idUser;
+    private int idUser;
 }

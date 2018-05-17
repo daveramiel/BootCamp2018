@@ -1,20 +1,15 @@
-package com.topic3.Topic3.model;
+package com.topic3.Topic3.Models;
 
 import lombok.Getter;
 import lombok.Setter;
 
-public class Product {
+@Getter
+@Setter
+public class ProductModel {
 
-
-
-    @Getter
-    @Setter
+    private int price;
     private Long id;
-    @Getter
-    @Setter
     private String name;
-    @Getter
-    @Setter
     private int amount;
 
 }

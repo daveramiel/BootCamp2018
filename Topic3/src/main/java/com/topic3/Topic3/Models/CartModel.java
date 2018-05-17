@@ -1,26 +1,31 @@
-package com.topic3.Topic3.model;
+package com.topic3.Topic3.Models;
 
 
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCart {
+@Getter
+@Setter
+public class CartModel {
 
-    private List<Product> cartList;
 
-    public ShoppingCart(){
+    private ArrayList<ProductModel> cartList;
+
+    public CartModel() {
         this.cartList = new ArrayList<>();
     }
 
-    public void addItem(Product newProd){
+    public void addItem(ProductModel newProd) {
         this.cartList.add(newProd);
     }
 
-    public Boolean deleteItem(Long idProd){
+    public Boolean deleteItem(Long idProd) {
         Boolean answer = false;
-        for (Product removeP : this.cartList) {
-            if (idProd == removeP.getId()){
+        for (ProductModel removeP : this.cartList) {
+            if (idProd == removeP.getId()) {
                 this.cartList.remove(removeP);
                 answer = true;
             }
@@ -28,17 +33,16 @@ public class ShoppingCart {
         return answer;
     }
 
-    public List<Product> getFullList(){
+    public ArrayList<ProductModel> getFullList() {
         return this.cartList;
     }
 
-    public Boolean cleanCart(){
-        Boolean answer=false;
-        if (!this.cartList.isEmpty()){
-            this.cartList.clear();
-            answer = true;
-        }
-        return answer;
+    public void cleanCart() {
+        this.cartList.clear();
+    }
+
+    public Boolean isEmpty() {
+        return this.cartList.isEmpty();
     }
 
 }

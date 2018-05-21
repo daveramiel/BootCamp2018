@@ -8,7 +8,7 @@ import lombok.Setter;
 public class ProductModel {
 
     private int price;
-    private Long id;
+    private int id;
     private String name;
     private int amount;
 

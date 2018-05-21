@@ -22,7 +22,7 @@ public class CartModel {
         this.cartList.add(newProd);
     }
 
-    public Boolean deleteItem(Long idProd) {
+    public Boolean deleteItem(int idProd) {
         Boolean answer = false;
         for (ProductModel removeP : this.cartList) {
             if (idProd == removeP.getId()) {
@@ -44,5 +44,7 @@ public class CartModel {
     public Boolean isEmpty() {
         return this.cartList.isEmpty();
     }
+
+
 
 }

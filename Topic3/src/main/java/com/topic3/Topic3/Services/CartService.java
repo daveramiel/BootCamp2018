@@ -26,7 +26,7 @@ public class CartService {
             return null;
     }
 
-    public Boolean searchProduct(Long productId){
+    public Boolean searchProduct(int productId){
         Boolean answer = false;
         for (ProductModel productSearch : this.cart.getFullList()){
             if(productId == productSearch.getId()){
@@ -36,7 +36,7 @@ public class CartService {
         return answer;
     }
 
-    public Boolean deleteItem(Long productId){
+    public Boolean deleteItem(int productId){
         Boolean answer = false;
         if (!this.cart.isEmpty() && this.searchProduct(productId)){
             answer = this.cart.deleteItem(productId);

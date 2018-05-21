@@ -9,9 +9,8 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import java.util.List;
 
-public class ShoppingCartTest {
+public class CartTest {
 
     private CartModel shoppingCart;
 

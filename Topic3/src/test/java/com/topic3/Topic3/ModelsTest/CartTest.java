@@ -1,4 +1,4 @@
-package com.topic3.Topic3.ModelTest;
+package com.topic3.Topic3.ModelsTest;
 
 import com.topic3.Topic3.Models.CartModel;
 import com.topic3.Topic3.Models.ProductModel;

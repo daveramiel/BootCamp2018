@@ -3,18 +3,18 @@ package com.topic3.Topic3.Services;
 import com.topic3.Topic3.Models.UserListModel;
 import com.topic3.Topic3.Models.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
+@Service
 public class UserService {
 
     @Autowired
-    private UserModel user;
     private UserListModel userList;
 
     public UserService() {
-        this.user = new UserModel();
         this.userList = new UserListModel();
     }
 
@@ -29,33 +29,34 @@ public class UserService {
     }
 
     public UserModel newUser(String mailLogin, String paswd) {
+        UserModel user = new UserModel();
         if (!this.searchMail(mailLogin)) {
             if (!mailLogin.isEmpty()) {
 
-                this.user.setMailLogin(mailLogin);
+                user.setMailLogin(mailLogin);
 
             }
             if (!paswd.isEmpty()) {
-                this.user.setPassword(paswd);
+                user.setPassword(paswd);
             }
             if (userList.getUserList().isEmpty()) {
-                this.user.setIdUser(0);
-                this.userList.getUserList().add(this.user);
+                user.setIdUser(0);
+                this.userList.getUserList().add(user);
             } else {
                 Iterator it = this.userList.getUserList().iterator();
                 int i = 0;
                 while (it.hasNext()) {
                     i++;
                 }
-                this.user.setIdUser(i);
-                this.userList.addUser(this.user);
+                user.setIdUser(i);
+                this.userList.addUser(user);
             }
         }
-        return this.user;
+        return user;
     }
 
-    public ArrayList<UserModel> getAllUsers() {
-        return this.userList.getFullList();
+    public UserListModel getAllUsers() {
+        return this.userList;
     }
 
     public Boolean deleteUserByMail(String mailU){

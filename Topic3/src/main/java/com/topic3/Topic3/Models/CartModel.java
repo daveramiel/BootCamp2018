@@ -3,12 +3,14 @@ package com.topic3.Topic3.Models;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
+@Repository
 public class CartModel {
 
 

@@ -2,9 +2,11 @@ package com.topic3.Topic3.Models;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository
 public class UserListModel {
 
 

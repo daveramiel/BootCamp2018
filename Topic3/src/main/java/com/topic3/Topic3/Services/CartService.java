@@ -3,9 +3,11 @@ package com.topic3.Topic3.Services;
 import com.topic3.Topic3.Models.CartModel;
 import com.topic3.Topic3.Models.ProductModel;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class CartService {
 
     @Autowired private CartModel cart;
@@ -18,12 +20,8 @@ public class CartService {
         this.cart.addItem(newP);
     }
 
-    public ArrayList<ProductModel> getFullCart(){
-        if (!this.cart.isEmpty()){
-            return this.cart.getFullList();
-        }
-        else
-            return null;
+    public CartModel getFullCart(){
+        return this.cart.isEmpty() ? null : this.cart;
     }
 
     public Boolean searchProduct(int productId){

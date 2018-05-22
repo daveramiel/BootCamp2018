@@ -10,4 +10,5 @@ public class UserModel {
     private String mailLogin;
     private String password;
     private int idUser;
+
 }

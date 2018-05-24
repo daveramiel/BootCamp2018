@@ -3,17 +3,17 @@ package com.topic4;
 import java.sql.*;
 
 
-public class HighScoolDB {
+public class HighSchoolDB {
 
-    private static HighScoolDB dbInstance;
+    private static HighSchoolDB dbInstance;
     private Connection connection;
 
 
-    public static HighScoolDB getInstance() {
-        return HighScoolDB.dbInstance == null ? new HighScoolDB() : HighScoolDB.dbInstance;
+    public static HighSchoolDB getInstance() {
+        return HighSchoolDB.dbInstance == null ? new HighSchoolDB() : HighSchoolDB.dbInstance;
     }
 
-    private HighScoolDB() {
+    private HighSchoolDB() {
         try {
             this.connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/high-school","root","");
         } catch (SQLException e) {
@@ -41,7 +41,7 @@ public class HighScoolDB {
 
 
     public static void main(String[] args) {
-        HighScoolDB hs = HighScoolDB.getInstance();
+        HighSchoolDB hs = HighSchoolDB.getInstance();
         try {
             hs.printName("Milhouse");
         } catch (SQLException e) {

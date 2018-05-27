@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends JpaRepository <Product,Long> {
+public interface ProductRepository extends JpaRepository <Product, Long> {
    List<Product> findByCategory (@Param("category")String category);
    Product findByName (@Param("name")String name);
 }

@@ -2,6 +2,7 @@ package com.bootcamp.api.models;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -18,8 +19,13 @@ public class User {
     private Long id;
     @Column(name = "password")
     private String password;
-    @Column(name = "email")
+    @Column(name = "email",unique = true)
     private String email;
     @Column(name = "token")
     private String token;
+
+    public User(String email, String password){
+        this.email = email;
+        this.password = password;
+    }
 }

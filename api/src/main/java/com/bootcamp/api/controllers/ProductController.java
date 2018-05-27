@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/products")
@@ -20,7 +21,7 @@ public class ProductController {
 
 
     @RequestMapping(method = RequestMethod.GET , produces = "application/jason")
-    public List<Product> getAll(){
+    public List<Product> getAllProducts(){
         return this.productService.getAll();
     }
 

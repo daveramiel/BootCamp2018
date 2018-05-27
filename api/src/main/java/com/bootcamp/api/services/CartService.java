@@ -6,6 +6,7 @@ import com.bootcamp.api.models.CartLine;
 import com.bootcamp.api.models.Product;
 import com.bootcamp.api.repositories.CartRepository;
 import com.bootcamp.api.repositories.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -13,7 +14,9 @@ import java.util.Optional;
 @Service
 public class CartService {
 
+    @Autowired
     private CartRepository cartRepository;
+    @Autowired
     private ProductRepository productRepository;
 
     public Cart getFullCart(Long userId){

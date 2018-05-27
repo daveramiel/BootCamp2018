@@ -1,6 +1,7 @@
 package com.bootcamp.api.controllers;
 
 
+import com.bootcamp.api.models.User;
 import com.bootcamp.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.xml.ws.Response;
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
@@ -26,8 +28,15 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json")
-    public String loginUser(@RequestParam String email, @RequestParam String password) {
-        return this.userService.login(email, password);
+    public ResponseEntity<?> loginUser(@RequestParam String email, @RequestParam String password) {
+        String token;
+        token = this.userService.login(email, password);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+
+    @RequestMapping(value = "/all",method = RequestMethod.GET, produces = "application/json")
+    public List<User> getAll(){
+        return this.userService.getAllUsers();
     }
 
 

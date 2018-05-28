@@ -24,8 +24,8 @@ public class User {
     @Column(name = "token")
     private String token;
 
-    public User(String email, String password){
+    /*public User(String email, String password){
         this.email = email;
         this.password = password;
-    }
+    }*/
 }

@@ -20,18 +20,17 @@ public class ProductController {
     private ProductService productService;
 
 
-    @RequestMapping(method = RequestMethod.GET , produces = "application/jason")
+    @RequestMapping(method = RequestMethod.GET , produces = "application/json")
     public List<Product> getAllProducts(){
         return this.productService.getAll();
     }
 
     @RequestMapping(value = "/name", method = RequestMethod.GET , produces =  "application/json")
-    public ResponseEntity<?> getByName(@RequestParam String name){
-        this.productService.getByName(name);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    public Product getByName(@RequestParam String name){
+        return this.productService.getByName(name);
     }
 
-    @RequestMapping(value = "/categories/{name}",method = RequestMethod.GET , produces = "application/json")
+    @RequestMapping(value = "/categories/{category}",method = RequestMethod.GET , produces = "application/json")
     public List<Product> getByCategory(@PathVariable("category") String category){
         return this.productService.getByCategory(category);
     }

@@ -28,8 +28,9 @@ public class UserServiceTest {
     private User userTest3;
 
     @Before public void setUp(){
-        this.userTest1 = new User("honda","1234");
         /*
+        this.userTest1 = new User("honda","1234");
+
         this.userTest1 = mock(User.class);
         when(userTest1.getEmail()).thenReturn("honda");
         when(userTest1.getPassword()).thenReturn("1234");

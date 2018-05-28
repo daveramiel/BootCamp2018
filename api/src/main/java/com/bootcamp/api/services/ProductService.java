@@ -22,7 +22,8 @@ public class ProductService {
         return this.productRepository.findByName(name);
     }
 
-    public List<Product> getByCategory(String category){
+    public List<Product> getByCategory(String category)
+    {
         return this.productRepository.findByCategory(category);
     }
 

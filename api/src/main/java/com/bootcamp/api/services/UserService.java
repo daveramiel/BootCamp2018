@@ -16,8 +16,10 @@ public class UserService {
     private UserRepository userRepository;
 
     public void newUser(String mail, String password) {
-        User newUser = new User(mail,password);
+        User newUser = new User();
         if (!this.userRepository.existsByEmail(mail)) {
+            newUser.setEmail(mail);
+            newUser.setPassword(password);
             this.userRepository.save(newUser);
         }
     }

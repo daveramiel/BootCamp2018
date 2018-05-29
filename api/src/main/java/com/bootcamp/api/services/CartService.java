@@ -4,8 +4,10 @@ package com.bootcamp.api.services;
 import com.bootcamp.api.models.Cart;
 import com.bootcamp.api.models.CartLine;
 import com.bootcamp.api.models.Product;
+import com.bootcamp.api.models.User;
 import com.bootcamp.api.repositories.CartRepository;
 import com.bootcamp.api.repositories.ProductRepository;
+import com.bootcamp.api.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +20,20 @@ public class CartService {
     private CartRepository cartRepository;
     @Autowired
     private ProductRepository productRepository;
+    @Autowired
+    private UserRepository userRepository;
+
+    public Cart generateCart(User user){
+        return this.cartRepository.save(new Cart(user));
+    }
 
     public Cart getFullCart(Long userId){
-        return this.cartRepository.findByUserId(userId);
+       Cart shoppingCart = this.cartRepository.findByUserId(userId);
+       if (shoppingCart == null){
+           Optional<User> user = this.userRepository.findById(userId);
+           this.generateCart(user.get());
+       }
+       return shoppingCart;
     }
 
     public Cart addProductById(Long idProd, Long userId,int amount){

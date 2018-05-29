@@ -2,10 +2,12 @@ package com.bootcamp.api.models;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
+@NoArgsConstructor
 @Entity
 @Table(name = "cart_lines")
 public class CartLine {

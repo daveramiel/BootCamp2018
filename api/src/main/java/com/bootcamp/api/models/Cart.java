@@ -2,15 +2,24 @@ package com.bootcamp.api.models;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.jws.soap.SOAPBinding;
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor
 @Entity
 @Table(name = "shopping_carts")
 public class Cart {
+
+    public Cart(User user){
+        this.setUser(user);
+        this.lines = new ArrayList<>();
+    }
+
     @Getter
     @Setter
     @Id
@@ -36,6 +45,14 @@ public class Cart {
         return total;
     }
 
+    public void findLineAddAmount(Long idProd, int amount) {
+        for (CartLine cL : this.getLines()) {
+            if (cL.getProduct().getId() == idProd) {
+                cL.setQuantity(cL.getQuantity() + amount);
+            }
+        }
+    }
+
     public Boolean isProduct(Long idProd){
         Boolean answer=false;
         for (CartLine cL : this.getLines()) {
@@ -47,10 +64,12 @@ public class Cart {
     }
 
     public void addNewLine(Product p,int amount){
-        CartLine cL = null;
+        CartLine cL = new CartLine(p,this,amount);
         if (!isProduct(p.getId())){
-            cL = new CartLine(p,this,amount);
             this.getLines().add(cL);
+        } else {
+            this.findLineAddAmount(p.getId(),amount);
         }
+        this.setTotal(this.getTotal());
     }
 }

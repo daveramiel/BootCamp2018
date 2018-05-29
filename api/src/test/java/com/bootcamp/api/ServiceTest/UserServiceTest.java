@@ -18,16 +18,17 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class UserServiceTest {
 
-    @Autowired
+
     private UserService userService;
-    @Autowired
-    private UserRepository userRepository;
+
+
 
     private User userTest1;
     private User userTest2;
     private User userTest3;
 
     @Before public void setUp(){
+        this.userService = new UserService();
         /*
         this.userTest1 = new User("honda","1234");
 

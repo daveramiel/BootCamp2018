@@ -1,6 +1,7 @@
 package com.bootcamp.api.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,8 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @NoArgsConstructor
-@Entity
-@Table(name = "cart_lines")
+@Entity(name = "cart_lines")
 public class CartLine {
 
     @Getter @Setter @Id
@@ -17,6 +17,7 @@ public class CartLine {
     @Column(name = "id")
     private Long id;
 
+    @JsonIgnore
     @Getter
     @Setter
     @ManyToOne

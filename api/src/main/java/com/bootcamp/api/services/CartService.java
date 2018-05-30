@@ -9,13 +9,15 @@ import com.bootcamp.api.repositories.CartLineRepository;
 import com.bootcamp.api.repositories.CartRepository;
 import com.bootcamp.api.repositories.ProductRepository;
 import com.bootcamp.api.repositories.UserRepository;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 import java.util.Optional;
 
+@NoArgsConstructor
 @Service
 public class CartService {
 
@@ -27,6 +29,10 @@ public class CartService {
     private ProductRepository productRepository;
     @Autowired
     private UserRepository userRepository;
+
+    public CartService(CartRepository cartRepo){
+        this.cartRepository = cartRepo;
+    }
 
     public Cart generateCart(User user) {
         return this.cartRepository.save(new Cart(user));
@@ -63,12 +69,17 @@ public class CartService {
     }
 
 
-    @javax.transaction.Transactional
+
     public boolean deleteById(Long idProd, Long userId) {
         boolean answer = false;
         Cart toDelete = this.getFullCart(userId);
         if (toDelete.isProduct(idProd)) {
-            List<CartLine> listCartLine = toDelete.getLines();
+            toDelete.deleteCartLineByProd(idProd);
+            this.cartRepository.save(toDelete);
+            /*List<CartLine> listCartLine = toDelete.getLines();
+            listCartLine.remove(this.productRepository.findById(idProd));
+            toDelete.setLines(listCartLine);
+            this.cartRepository.save(toDelete);
             int i = 0;
 
             while(!listCartLine.get(i).getProduct().getId().equals(idProd)){
@@ -76,11 +87,9 @@ public class CartService {
             }
             Long id = listCartLine.get(i).getId();
             this.cartLineRepository.deleteById(id);
-            /*
             listCartLine.remove(i);
-            toDelete.setLines(listCartLine);
 
-            this.cartRepository.save(toDelete);
+
             */
             answer = true;
         }

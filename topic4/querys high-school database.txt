@@ -1,0 +1,145 @@
+create database `high-school`;
+use high-school;
+
+create table students(
+pk_id_student int auto_increment not null,
+first_name varchar(30) not null,
+last_name varchar(30) not null,
+registration_number int unique,
+birth date,
+primary key (pk_id_student));
+
+create table teachers(
+pk_id_teacher int auto_increment not null primary key,
+first_name varchar(30) not null DEFAULT 'Jhon',
+last_name varchar(30) not null DEFAULT 'Doe',
+birth date);
+
+
+create table courses(
+pk_id_course int auto_increment not null primary key,
+fk_id_teacher varchar(30) not null,
+name varchar(30) not null,
+hours_week int
+Foreign key (fk_id_teacher) references teachers (pk_id_teacher));
+
+create table Days(
+pk_id_day int auto_increment not null primary key,
+name varchar(30) not null DEFAULT 'Osvaldo');
+
+create table students_courses(
+fk_id_student int not null,
+fk_id_course int not null,
+partial1 int DEFAULT 10,
+partial2 int DEFAULT 10,
+partial3 int DEFAULT 10,
+final int DEFAULT 10,
+Foreign key (fk_id_student) references students (pk_id_student),
+Foreign key (fk_id_course) references courses(pk_id_course));
+
+create table Days_Courses(
+fk_id_day int not null,
+fk_id_course int not null,
+from time,
+till time,
+Foreign key (fk_id_day) references Days (pk_id_day),
+Foreign key (fk_id_course) references courses(pk_id_course));
+
+alter table Days_Courses ADD primary key (fk_id_day,fk_id_course);
+alter table student_courses ADD primary key (fk_id_student,fk_id_course);
+
+insert into teachers (first_name,last_name,birth) values ('Shiryu','Blind','1972-10-04');
+insert into teachers (first_name,last_name,birth) values ('Genzo','Wakabayashi','1979-12-31');
+insert into teachers (first_name,last_name,birth) values ('Wesley','Snipes','1962-07-31');
+
+insert into students (first_name,last_name,registratitio_number,birth) values ('Milhouse','Van Houten','152','1988-05-08');
+
+
+
+------------------------------------------------------------------------
+
+DROP PROCEDURE IF EXISTS students_by_given_course;
+
+DELIMITER //
+
+CREATE PROCEDURE students_by_given_course(course_name VARCHAR(30))
+BEGIN
+
+	DECLARE id_teacher INT;
+	DECLARE id_course INT;
+
+	SELECT name as "Course"
+		FROM courses
+		WHERE pk_id_course = id_course;
+	
+	SELECT last_name as "Last Name", first_name as "First Name"
+		FROM teachers 
+		WHERE pk_id_teacher = id_teacher;
+
+	SELECT s.last_name as "First Name",s.first_name as "Last Name"
+		FROM students s
+		INNER JOIN students_courses cs ON cs.fk_id_student= s.pk_id_student
+		WHERE cs.fk_id_course = id_course
+		ORDER BY s.last_name,s.first_name;
+END //
+
+DELIMITER ; 
+
+
+
+-------------------------------------------------------------------
+
+DELIMITER //
+
+CREATE PROCEDURE students_by_given_course(course_name VARCHAR(30))
+BEGIN
+
+
+DECLARE id_teacher INT;
+
+
+Select first_name as "Firt Name", last_name as "Last Name"
+from teachers
+where pk_id_teacher = id_teacher;
+
+Select  d.name as "Day", dc.from as "From", dc.till as "To", c.name as "Course"
+from days_courses dc
+inner join days d on d.pk_id_day =  dc.fk_id_day
+inner join courses c on c.fk_id_teacher = 1
+where c.fk_id_teacher = id_teacher;
+
+END //
+
+DELIMITER ;
+
+
+--------------------------------------------------------------------
+
+use high-school;
+
+DROP PROCEDURE IF EXISTS students_by_given_course;
+
+DELIMITER //
+
+CREATE PROCEDURE students_by_given_course(course_name VARCHAR(30))
+BEGIN
+
+	DECLARE id_teacher INT;
+	DECLARE id_course INT;
+
+	SELECT name as "Course"
+		FROM courses
+		WHERE pk_id_course = id_course;
+	
+	SELECT last_name as "Last Name", first_name as "First Name"
+		FROM teachers 
+		WHERE pk_id_teacher = id_teacher;
+
+	SELECT s.last_name as "First Name",s.first_name as "Last Name"
+		FROM students s
+		INNER JOIN students_courses cs ON cs.fk_id_student= s.pk_id_student
+		WHERE cs.fk_id_course = id_course
+		ORDER BY s.last_name,s.first_name;
+END //
+
+DELIMITER ; 

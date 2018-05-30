@@ -2,8 +2,6 @@ package com.bootcamp.api.controllers;
 
 
 import com.bootcamp.api.models.Cart;
-import com.bootcamp.api.models.CartLine;
-import com.bootcamp.api.models.Product;
 import com.bootcamp.api.models.User;
 import com.bootcamp.api.services.CartService;
 import com.bootcamp.api.services.UserService;
@@ -42,7 +40,8 @@ public class CartController {
     @RequestMapping(value = "/{idproduct}" ,  method = RequestMethod.DELETE, produces = "application/json")
     public ResponseEntity<?> deleteById(@RequestParam String token,@PathVariable("idproduct") Long idProd){
         User user = this.userService.getByToken(token);
-        return this.cartService.deleteById(idProd,user.getId()) ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        boolean deleting = this.cartService.deleteById(idProd,user.getId());
+        return deleting ? new ResponseEntity<>(HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, produces = "application/json")

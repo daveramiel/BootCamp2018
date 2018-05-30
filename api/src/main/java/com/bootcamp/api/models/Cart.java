@@ -45,6 +45,10 @@ public class Cart {
         return total;
     }
 
+    public void deleteCartLineByProd(Long idProd){
+        this.lines.removeIf(q->q.getProduct().getId().equals(idProd));
+    }
+
     public void findLineAddAmount(Long idProd, int amount) {
         for (CartLine cL : this.getLines()) {
             if (cL.getProduct().getId() == idProd) {
